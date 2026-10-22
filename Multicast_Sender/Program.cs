@@ -1,12 +1,12 @@
 ﻿using System.Net;
-using System.Net.Sockets;
 using System.Text;
-
+using System.Net.Sockets;
 
 IPAddress multicastIPAddress = IPAddress.Parse("239.0.0.1");
 int port = 12345;
 
-UdpClient udpClient = new UdpClient();
+using UdpClient udpClient = new UdpClient();
+
 udpClient.JoinMulticastGroup(multicastIPAddress);
 
 Console.WriteLine("Multicast server working...");
@@ -19,9 +19,29 @@ while (true)
     if (message is null)
         continue;
 
-    byte[] bytes = Encoding.Default.GetBytes(message);
+    byte[] bytes = Encoding.UTF8.GetBytes(message);
 
-    udpClient.Send(bytes, bytes.Length, new IPEndPoint(multicastIPAddress, port));
+    udpClient.Send(
+        bytes,
+        bytes.Length,
+        new IPEndPoint(multicastIPAddress, port)
+    );
+
+    if (message.Equals("exit", StringComparison.OrdinalIgnoreCase))
+    {
+        // Köhnə multicast qrupundan çıx
+        udpClient.DropMulticastGroup(multicastIPAddress);
+
+        Console.WriteLine("Old multicast group left.");
+
+        // Yeni multicast qrupuna qoşul
+        multicastIPAddress = IPAddress.Parse("239.0.0.1");
+        port = 22345;
+
+        udpClient.JoinMulticastGroup(multicastIPAddress);
+
+        Console.WriteLine("Joined new multicast group.");
+    }
 
     Console.WriteLine("Message sent.");
 }

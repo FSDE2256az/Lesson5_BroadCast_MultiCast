@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Broadcast_Sender", "Broadca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Broadcast_Receiver", "Broadcast_Receiver\Broadcast_Receiver.csproj", "{7CC01706-A8AA-4E39-8D4C-84F987C056CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multicast_Receiver", "Multicast_Receiver\Multicast_Receiver.csproj", "{FC774876-A4C4-4B93-A764-0D2B2AC1CDBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multicast_Sender", "Multicast_Sender\Multicast_Sender.csproj", "{3591CFC8-775C-464B-B4E1-47197F5FF3A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7CC01706-A8AA-4E39-8D4C-84F987C056CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CC01706-A8AA-4E39-8D4C-84F987C056CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CC01706-A8AA-4E39-8D4C-84F987C056CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC774876-A4C4-4B93-A764-0D2B2AC1CDBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC774876-A4C4-4B93-A764-0D2B2AC1CDBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC774876-A4C4-4B93-A764-0D2B2AC1CDBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC774876-A4C4-4B93-A764-0D2B2AC1CDBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3591CFC8-775C-464B-B4E1-47197F5FF3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3591CFC8-775C-464B-B4E1-47197F5FF3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3591CFC8-775C-464B-B4E1-47197F5FF3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3591CFC8-775C-464B-B4E1-47197F5FF3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
